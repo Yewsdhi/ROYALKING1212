@@ -1,6 +1,5 @@
 from typing import Union
-from SONALI_MUSIC import app
-from SONALI_MUSIC.utils.formatters import time_to_seconds
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -64,22 +63,14 @@ def queue_back_markup(_, CPLAY):
     return upl
 
 
-def aq_markup(_, chat_id):
+def aq_markup(_, chat_id): 
     buttons = [
         [
             InlineKeyboardButton(text="▷", callback_data=f"ADMIN Resume|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
-            InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [
-            InlineKeyboardButton(
-                text="˹❍ᴡηєʀ ᴀʙσᴜᴛ˼ ", url=f""
-            ),
-            InlineKeyboardButton(
-                text="˹ᴄʜᴧᴛ ɢʀσᴜᴘ˼", url=f""
-            ),
-        ],
-      ]
+    ]
     return buttons
+    
